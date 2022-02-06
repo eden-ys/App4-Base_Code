@@ -33,24 +33,28 @@ blah, blah, blah, blah
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+	var docMod = document.lastModified;
+       alert("This file last modified  " + docMod);
+       console.log("This file last modified  " + docMod);
+
+        var city_count = 0;
+        var country_count = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-alert(allergy_count);
+        function cityAdd(){
+            city_count = city_count + 1;
+alert(city_count);
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-alert(cold_count);
+        function countryAdd(){
+            country_count = country_count + 1;
+alert(country_count);
 	}
 	function getresults(){
-	allergyPercent= (allergy_count/(allergy_count+cold_count))*100;
-	coldPercent= (cold_count/(allergy_count+cold_count))*100;
+	cityPercent= (city_count/(city_count+country_count))*100;
+	countryPercent= (country_count/(city_count+country_count))*100;
 	var resultText = document.getElementById("results-section");
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent+ "%";}
+	resultText.innerHTML = "Probability of choosing city =" + cityPercent + "%" + "<br> Probability of choosing country =" + countryPercent+ "%";}
   </script>
 
 
@@ -75,31 +79,35 @@ alert(cold_count);
     left: 0vw;
     z-index: 1;
 }
+<img src="https://casdbeavertales.org/wp-content/uploads/2021/03/PZv0T3JYmma0JDcwAijLyUVGArgsEEXkNGXQvUcb.jpeg" alt="City vs Countryside">
+img, object{
+            	max-height:90%;
+        		max-width:90%;
+        	}
+
 </style>
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Living in the city or the countryside?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you wondering if you would like to live in the city or countryside? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Are your eyes watery or itchy?</h1>
+		<h1>Do you rely on technology a lot?</h1>
 	</div>
 	
  <div id="content" class="w3-container">
-		<p>Are your eyes watery or itchy?</p>
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<p>Do you rely on technology a lot?</p>
+		<a href="#two"  onclick="cityAdd();" class="w3-btn w3-black"> Yes</a>
+		<a href="#two"  onclick="countrysideAdd();" class="w3-btn w3-black">No</a>
 	       
 	 </div>
 
@@ -107,61 +115,61 @@ alert(cold_count);
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Do you have a fever?</h1>	
+		<h1>Do you prefer living somewhere that is really quiet?</h1>	
 	</div>
 	
 <div id="content" class="w3-container">
-	<p>Do you have a fever?</p>
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you prefer living somewhere that is really quiet?</p>
+	<a href="#three"  onclick="countrysideAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#three"  onclick="cityAdd();" class="w3-btn w3-black">No</a>
 	
 	</div>	
 </div>	
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Do you have a sore throat?</h1>
+		<h1>Would you like living in a fast-paced environment?</h1>
 	</div>
 	
 <div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<p>Would you like living in a fast-paced environment?</p>
+	<a href="#four"  onclick="cityAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#four"  onclick="countrysideAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 	
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Are your symptoms seasonal or chronic?</h1>
+		<h1>Would you like to be able to utilize more options for social events?</h1>
 	</div>
 	
 <div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<p>Would you like to be able to utilize more options for social events?</p>
+	<a href="#five"  onclick="cityAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#five"  onclick="countrysideAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Do you have any hives or rashes?</h1>
+		<h1>Do you wish to seek more occupational opportunties?</h1>
 	</div>
 	
 <div id="content" class="w3-container">
-	<p>Do you have any haves or rashes?</p>
-	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you wish to seek more occupational opportunties?</p>
+	<a href="#six"  onclick="cityAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#six"  onclick="countrysideAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Are you experiencing congestion or pressure?</h1>
+		<h1>Do you want to live somewhere with cheaper living expenses?</h1>
 	</div>
 	
 <div id="content" class="w3-container">
-	<p>Are you experincing congestion or pressure?</p>
-	<a href="#result"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#result"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you want to live somewhere with cheaper living expenses?</p>
+	<a href="#result"  onclick="countrysideAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#result"  onclick="cityAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 	
