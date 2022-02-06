@@ -37,7 +37,7 @@ blah, blah, blah, blah
        console.log("This file last modified  " + docMod);
 
         var city_count = 0;
-        var country_count = 0;
+        var countryside_count = 0;
 
 
         function cityAdd(){
@@ -45,15 +45,15 @@ blah, blah, blah, blah
 alert(city_count);
         }
 
-        function countryAdd(){
-            country_count = country_count + 1;
-alert(country_count);
+        function countrysideAdd(){
+            countryside_count = countryside_count + 1;
+alert(countryside_count);
 	}
 	function getresults(){
-	cityPercent= (city_count/(city_count+country_count))*100;
-	countryPercent= (country_count/(city_count+country_count))*100;
+	cityPercent= (city_count/(city_count+countryside_count))*100;
+	countrysidePercent= (countryside_count/(city_count+countryside_count))*100;
 	var resultText = document.getElementById("results-section");
-	resultText.innerHTML = "Probability of choosing city =" + cityPercent + "%" + "<br> Probability of choosing country =" + countryPercent+ "%";}
+	resultText.innerHTML = "Probability of choosing city =" + cityPercent + "%" + "<br> Probability of choosing country =" + countrysidePercent+ "%";}
   </script>
 
 
@@ -78,8 +78,8 @@ alert(country_count);
     left: 0vw;
     z-index: 1;
 }
-<img src="https://casdbeavertales.org/wp-content/uploads/2021/03/PZv0T3JYmma0JDcwAijLyUVGArgsEEXkNGXQvUcb.jpeg" alt="City vs Countryside">
 img, object{
+	<img src="img_0.jpeg" alt="City vs Countryside">
             	max-height:90%;
         		max-width:90%;
         	}
